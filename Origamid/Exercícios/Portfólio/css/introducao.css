@@ -1,0 +1,85 @@
+.introducao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.introducao h1 {
+  font-size: 4.5rem;
+  line-height: 1.25;
+  margin-bottom: 30px;
+  position: relative; /*Foi necessário adicionar isso, pois a imagem de detalhe iria ficar em cima do h1 e esse elemento é o pai do elemento before*/
+}
+
+.introducao h1::before {
+  content: '';
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url('../img/detalhe.svg') no-repeat center;
+  position: absolute;
+  top: -15px;
+  left: -40px;
+  z-index: -1;
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+@media (max-width: 1000px) {
+  .introducao h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .introducao h1 {
+    font-size: 3rem;
+  }
+  .introducao h1::before {
+    width: 65px;
+    height: 50px;
+    top: 12px;
+    left: -12px;
+  }
+}
+
+@media (max-width: 620px) {
+  .introducao {
+    text-align: center;
+    padding: 20px;
+    justify-items: center;
+    grid-template-columns: 1fr;
+  }
+  .perfil {
+    width: 350px;
+  }
+  .introducao h1 {
+    font-size: 2.5rem;
+  }
+  .introducao h1::before {
+    width: 30px;
+    height: 10px;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 450px) {
+  .perfil {
+    width: 250px;
+  }
+  .introducao h1 {
+    font-size: 2rem;
+  }
+}
