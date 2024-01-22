@@ -43,7 +43,7 @@ p {
 
 .menu {
   display: flex;
-  flex-wrap: wraps;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
@@ -97,6 +97,11 @@ p {
   right: -30px;
 }
 
+.introducao-cover img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .introducao a {
   background: #ee2211;
   color: white;
@@ -115,6 +120,7 @@ p {
   padding: 40px;
   align-self: center;
   background-image: url(onda.svg);
+  /*word-break: break-all;*/
 }
 
 .vantagens-item {
@@ -144,4 +150,46 @@ p {
   text-align: center;
   padding: 40px;
   box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+  .conteudo-vantagem {
+    grid-template-columns: 1fr;
+  }
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .header {
+    gap: 30px;
+  }
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+  .introducao {
+    text-align: left;
+  }
+  .introducao::before {
+    display: none;
+    justify-items: start;
+  }
+  .subtitulo {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .subtitulo {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
 }
