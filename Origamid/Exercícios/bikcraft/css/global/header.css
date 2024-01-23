@@ -8,11 +8,6 @@
   gap: 20px;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box; /*Com isso não é necessário colocar um valor quebrado no max width, por conta do padding*/
-  padding: 20px;
-  max-width: 1200px;
-  margin-left: auto; /*Evita que os conteúdos fiquem fora do meio por conta do aumento da tela*/
-  margin-right: auto; /*Evita que os conteúdos fiquem fora do meio por conta do aumento da tela*/
 }
 
 .header-menu {
